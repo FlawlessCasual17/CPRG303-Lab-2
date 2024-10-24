@@ -13,38 +13,38 @@ import {
 } from 'react-native'
 
 import {
-    Colors,
+    Colors/* ,
     DebugInstructions,
     Header,
     LearnMoreLinks,
-    ReloadInstructions
+    ReloadInstructions */
 } from 'react-native/Libraries/NewAppScreen'
 
-function Section({ children, title }) {
-    const isDarkMode = useColorScheme() === 'dark'
-    return (
-        <View style={styles.sectionContainer}>
-            <Text
-                style={[
-                    styles.sectionTitle,
-                    {
-                        color: isDarkMode ? Colors.white : Colors.black
-                    }
-                ]}>
-                {title}
-            </Text>
-            <Text
-                style={[
-                    styles.sectionDescription,
-                    {
-                        color: isDarkMode ? Colors.light : Colors.dark
-                    }
-                ]}>
-                {children}
-            </Text>
-        </View>
-    )
-}
+// function Section({ children, title }) {
+//     const isDarkMode = useColorScheme() === 'dark'
+//     return (
+//         <View style={styles.sectionContainer}>
+//             <Text
+//                 style={[
+//                     styles.sectionTitle,
+//                     {
+//                         color: isDarkMode ? Colors.white : Colors.black
+//                     }
+//                 ]}>
+//                 {title}
+//             </Text>
+//             <Text
+//                 style={[
+//                     styles.sectionDescription,
+//                     {
+//                         color: isDarkMode ? Colors.light : Colors.dark
+//                     }
+//                 ]}>
+//                 {children}
+//             </Text>
+//         </View>
+//     )
+// }
 
 function App() {
     const isDarkMode = useColorScheme() === 'dark'
@@ -83,13 +83,6 @@ function App() {
                     <LearnMoreLinks />
                 </View>
             </ScrollView> */}
-            <View style={styles.form}>
-                <TextInput
-                    style={styles.input}
-                    placeholder="Add a new task..."
-                />
-                <Button title="Add" />
-            </View>
             <ScrollView>
                 <Pressable>
                     <View style={[styles.task, styles.completed]}>
@@ -107,6 +100,13 @@ function App() {
                     </View>
                 </Pressable>
             </ScrollView>
+            <View style={styles.form}>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Add a new task..."
+                />
+                <Button title="Add" />
+            </View>
         </SafeAreaView>
     )
 }
