@@ -1,9 +1,11 @@
 import React from 'react'
 import {
+    Button,
     Pressable,
     ScrollView,
     StyleSheet,
     Text,
+    TextInput,
     View
 } from 'react-native'
 
@@ -28,22 +30,31 @@ const styles = StyleSheet.create({
 
 export default function ToDoList() {
     return (
-        <ScrollView>
-            <Pressable>
-                <View style={[styles.task, styles.completed]}>
-                    <Text style={styles.taskText}>Do laundry</Text>
-                </View>
-            </Pressable>
-            <Pressable>
-                <View style={[styles.task]}>
-                    <Text style={styles.taskText}>Go to gym</Text>
-                </View>
-            </Pressable>
-            <Pressable>
-                <View style={[styles.task, styles.completed]}>
-                    <Text style={styles.taskText}>Walk dog</Text>
-                </View>
-            </Pressable>
-        </ScrollView>
+        <div>
+            <ScrollView>
+                <Pressable>
+                    <View style={[styles.task, styles.completed]}>
+                        <Text style={styles.taskText}>Do laundry</Text>
+                    </View>
+                </Pressable>
+                <Pressable>
+                    <View style={[styles.task]}>
+                        <Text style={styles.taskText}>Go to gym</Text>
+                    </View>
+                </Pressable>
+                <Pressable>
+                    <View style={[styles.task, styles.completed]}>
+                        <Text style={styles.taskText}>Walk dog</Text>
+                    </View>
+                </Pressable>
+            </ScrollView>
+            <View style={styles.form}>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Add a new task..."
+                />
+                <Button title="Add" />
+            </View>
+        </div>
     )
 }
