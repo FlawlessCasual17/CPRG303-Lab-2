@@ -1,13 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StatusBar, useColorScheme } from 'react-native'
 
-import {
-    Colors /* ,
-DebugInstructions,
-Header,
-LearnMoreLinks,
-ReloadInstructions */
-} from 'react-native/Libraries/NewAppScreen'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 import ToDoList from './ToDoList'
 
